@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>User Form</title>
+    </head>
+    <body>
+       <div class="row">
+        <div class="col-12">
+            <form method="post" action="{% url 'submitform' %}">
+            {% csrf_token %}
+                <div>
+                    <label for="">Value1</label>
+                    <input type="text" name="num1" value="{{n1}}" class="form=control"/>
+                </div>
+                <div>
+                    <label for="">Value2</label>
+                    <input type="text" name="num2" value="{{n2}}" class="form=control"/>
+                </div>
+                <div class="pt-4">
+                    <button type="submit">Save</button>
+                </div>
+                OUTPUT
+                <input type="text" value="{{output}}"/>
+       </div>
+
+
+    </body>
+</html>

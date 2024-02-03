@@ -16,7 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from wscubetech import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('about-us/', views.aboutUs),
+    path('', views.homePage),
+    path('userformget', views.userFormGet),
+    path('submitform', views.submitform,name="submitform"),
+    path('userformpost', views.userFormPost),
+    path('basic', views.basicPage),
+    path('course/', views.course),
+    # path('course/<int:courseid>', views.courseDetails),
+    # path('course/<str:courseid>', views.courseDetails),
+    # path('course/<slug:courseid>', views.courseDetails),
+    path('course/<courseid>', views.courseDetails),
 ]
